@@ -19,7 +19,6 @@
             $time = strtotime('2002-09-29 00:00:00');
             include("include/header.php");
             include("include/functions.php");
-            headerFunction();
         ?>
 
         <div id="AboutMe">
@@ -66,7 +65,7 @@
                         ?>
                         <div class="col-md-4">
                             <div class="card">
-                                <a href="Projects.php?ProId=1">
+                                <a href="Projects.php">
                                     <img src="" class="card-img-top ProjectImage">
                                 </a>
                                 <div class="card-body">
