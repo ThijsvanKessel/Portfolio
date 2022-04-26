@@ -1,0 +1,109 @@
+body {
+    background-image: url("../img/VaultOpen.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+button{
+    width: 65px;
+    height: 65px;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+#redBlock1{
+    width: 100px;
+    height: 40px;
+    left: 20px;
+    top: 170px;
+    background-color: red;
+    position: absolute;
+    z-index: 0;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+#redBlock2{
+    width: 100px;
+    height: 40px;
+    left: 20px;
+    top: 170px;
+    background-color: rgb(102, 1, 1);
+    position: absolute;
+    z-index: -1;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+#greenBlock1{
+    width: 100px;
+    height: 40px;
+    left: 122px;
+    top: 170px;
+    background-color: green;
+    position: absolute;
+    z-index: 0;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+#greenBlock2{
+    width: 100px;
+    height: 40px;
+    left: 122px;
+    top: 170px;
+    background-color: rgb(1, 73, 1);
+    position: absolute;
+    z-index: -1;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+#attempts{
+    position: absolute;
+    top: 510px;
+    left: 20px;
+    width: 190px;
+    color: black;
+    background-color: lightgrey;
+    padding: 5px;
+    border: solid black 2px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#buttons{
+    padding-top: 310px;
+    padding-left: 20px;
+}
+
+
+#display{
+    background-color: lightgrey;
+    position: absolute;
+    height: 80px;
+    width: 200px;
+    top: 220px;
+    left: 20px;
+    border: solid black 2px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#vaultDoor{
+    position: absolute;
+    top: 76px;
+    left: 440px;
+}
+
+#explosion{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 100px;
+    left: 560px;
+}

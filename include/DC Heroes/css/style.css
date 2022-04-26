@@ -1,0 +1,194 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+    background-color: lightgray;
+}
+
+#header{
+    background-color: red;
+    height: 20%;
+    position: relative;
+}
+
+#marvel-logo{
+    height: 80px;
+    padding-left: 20px;
+}
+
+#logo-text{
+    color:white;
+    font-size: xx-large;
+}
+
+#main-container{
+    height: calc(100% - 162px);
+    background-color: lightgray;
+}
+
+#main-left{
+    width: 20%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+    background-color: lightgray;
+}
+
+#main-center{
+    width: 35%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+    background-color: lightgray;
+}
+
+#main-right{
+    width: 45%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+    background-color: lightgray ;
+}
+
+#list{
+    list-style: none;
+}
+
+#midleTitle{
+    color: black;
+    font-size: x-large;
+    padding-left: 5%;
+    padding-bottom: 30px;
+}
+
+#title{
+    color: black;
+    font-size: x-large;
+    padding-left: 5%;
+}
+
+#text{
+    color: black;
+    padding-left: 10%;
+}
+
+.HeroInfo{
+    height: 250px;
+    position: relative;
+    border: 1px black solid;
+    overflow: auto;
+}
+
+#SmallDescription{
+    position: relative;
+    margin-left:160px;
+    width: 60%;
+}
+
+#descriptionText{
+    height: 100px;
+}
+
+.ImageContainer{
+    height: 170px;
+    width: 150px;
+    position: absolute;
+}
+
+#TeamHeroImage{
+    height: 170px;
+    width: 150px;
+}
+
+#Paragraph{
+    color: black;
+    font-size: x-large;
+}
+
+#button{
+    background-color: white;
+    color: black;
+    border: 2px solid #b3b3b3;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#button:hover{
+    background-color: #b3b3b3;
+    color: white;
+}
+
+.MainImage{
+    width: 165px;
+    height: 187px;
+    padding-left: 37%;
+    padding-right: 37%;
+    border-radius: 50%;
+}
+
+#HeroTitle{
+    color: red;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#HeroBanner{
+    background-image: url(' ../img/HeroPageBackground.jpg');
+    padding-bottom: 50px;
+}
+
+.MidHeroes{
+    overflow: auto;
+    height: 575px;
+}
+
+.MidHeroes ul{
+    list-style-type: none;
+}
+
+.hero-page{
+    overflow: auto;
+    height: 635px;
+}
+
+#input-box{
+    height: 20px;
+    width: 200px;
+}
+
+#input-box2{
+    height: 150px;
+    width: 400px;
+}
+
+.MidHeroes li:nth-child(odd){
+    background-color: blue;
+}
+
+.MidHeroes li:nth-child(even){
+    background-color: red;
+}
+
+#TeamIcon{
+    height: 20px;
+    width: 20px;
+}
+
+#comment{
+    width: 300px;
+    list-style-type: none;
+    background-color: white;
+    border: 1px black solid;
+}
+
+#CommentPartTitle{
+    font-size: x-large;
+}
+

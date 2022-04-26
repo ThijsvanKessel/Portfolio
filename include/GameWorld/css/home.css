@@ -1,0 +1,106 @@
+body {
+    background-image: url("../img/wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+.content-container{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+.logo{
+    margin-top: 30px;
+}
+
+.main-nav{
+    margin-top: 40px;
+    background-color: darkred;
+}
+
+.main-nav li{
+    list-style-type: none;
+    display: inline;
+}
+
+.list-text{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: darkred;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.content-container li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.content-container a{
+    display: inline-block;
+}
+
+
+.footer{
+	width: 230px;
+	height: 20px;
+	margin: 0 auto;
+	text-align: center;
+	background-color:darkred;
+    color: white;
+    border-radius: 25px;
+}
+
+.footer a{
+	color: white;
+	list-style: none;
+	color: white;
+	text-align: center;
+	text-decoration: blink;
+}
+
+.contact-form{
+    color: white;
+}
+
+.image-container{
+    position: relative;
+}
+
+.imagetext{
+   color:white;
+   position: absolute;
+   width: 1000px;
+   top: 30px;
+   text-align: center;
+}
+
+.home-container{
+    height: 531px;
+}
+
+.about-container{
+    height: 509px;
+}
+
+.contact-container{
+    height: 515px;
+}
+
+.basket-container{
+    height: 476px;
+}
+
+.table{
+    color:white;
+}
+.total-price{
+    color:white;
+}

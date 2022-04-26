@@ -17,12 +17,34 @@
         <?php
             include("include/header.php");
             include("include/functions.php");
-        ?>
-            </br></br>
+            if(isset($_GET['proID']))
+                {
+                    $proID = $_GET['proID'];
+                }
+            else
+                {
+                    $proID = rand(1,3);
+                }
+
+            $connect = mysqli_connect("localhost","root","", "portfoliobase");
+
+            $sql = "SELECT * FROM projects WHERE ProjectID = ".$proID;
+            $resource = mysqli_query($connect, $sql);
+    
+            $projects = array();
+            while($result = mysqli_fetch_assoc($resource))
+            {
+                $projects[] = $result;
+            }
+
+            foreach($projects as $k=>$project)
+            {
+                ?>
+                </br></br>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3>Calculator ++</h3>
+                        <h3><?php echo $project['ProjectName']; ?></h3>
                     </div>
                 </div>
             </div>
@@ -32,7 +54,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <iframe src="https://www.thijsvankessel.nl" width="1070px" height="600px"></iframe>
+                                <iframe src="<?php echo $project['ProjectLink']; ?>" width="1070px" height="600px"></iframe>
                             </div>
                         </div>
                     </div>
@@ -43,7 +65,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Description:</h5>
-                                <p class="card-text">A calculator working with an html form and basic php calculation funcitons. The calculator is decorated using css.</p><br>
+                                <p class="card-text"><?php echo $project['ProjectDescription']; ?></p><br>
                             </div>
                         </div>
                     </div>
@@ -67,3 +89,9 @@
                     </div>
                 </div>        
             </div>
+                <?php
+            }
+
+
+        ?>
+            

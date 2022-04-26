@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Vault">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="img/Favicon.png" type="image/x-icon"/>
+        <title>Vault</title>
+    </head>
+<body>
+    <div id="main-container">
+        <div id="mid-container">
+            <div id="redBlock1"></div>
+            <div id="redBlock2"></div>
+            <div id="greenBlock1"></div>
+            <div id="greenBlock2"></div>
+            <div id="display"><br>
+                <div id="number-container"></div>
+                <div id="textDisplay"></div>
+            </div>
+            <div id="buttons">
+                <button value="1" class="buttonNumber" onclick="getNumber(this)">1</button>
+                <button value="2" class="buttonNumber" onclick="getNumber(this)">2</button>
+                <button value="3" class="buttonNumber" onclick="getNumber(this)">3</button><br>
+                <button value="4" class="buttonNumber" onclick="getNumber(this)">4</button>
+                <button value="5" class="buttonNumber" onclick="getNumber(this)">5</button>
+                <button value="6" class="buttonNumber" onclick="getNumber(this)">6</button><br>
+                <button value="7" class="buttonNumber" onclick="getNumber(this)">7</button>
+                <button value="8" class="buttonNumber" onclick="getNumber(this)">8</button>
+                <button value="9" class="buttonNumber" onclick="getNumber(this)">9</button>
+            </div>
+        </div>
+        <div id="attempts">
+            <a id="correct-attempts">Correct attempts: </a><a id="correct-attempts-number">0</a><br>
+            <a id="wrong-attempts">Wrong attempts: </a><a id="wrong-attempts-number">0</a>
+        </div>
+    </div>
+    <div id="vaultDoor">
+        <img id="door" src="img/VaultDoor.png">
+    </div>
+    <div id="explosiondiv">
+        <img id="explosion" src="img/explosion.gif">
+    </div>
+    <audio src="audio/victory.mp3" id="correctsSound" controls-none></audio>
+    <audio src="audio/explosion.mp3" id="wrongSound" controls-none></audio>
+    <audio src="audio/vaultDoor.mp3" id="doorSound" controls-none></audio>
+    <script type="text/javascript" src="JS/main.js"></script>
+</body>

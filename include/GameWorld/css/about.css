@@ -1,0 +1,52 @@
+body {
+    background-image: url("../img/wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+
+.content-container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.logo{
+    margin-top: 30px;
+}
+
+.main-nav{
+    margin-top: 40px;
+    background-color: darkred;
+}
+
+.main-nav li{
+    list-style-type: none;
+    display: inline;
+}
+
+
+.list-text{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: darkred;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.about-form{
+    color: white;
+}
+
+.about-text{
+    color: white;
+}
+
+.form-result{
+    margin-top: 50px;
+    text-align: center;
+}

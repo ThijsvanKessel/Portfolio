@@ -19,6 +19,26 @@
             $time = strtotime('2002-09-29 00:00:00');
             include("include/header.php");
             include("include/functions.php");
+            $connect = mysqli_connect("localhost","root","", "portfoliobase");
+
+            if(isset($_GET['class']))
+            {
+                $class = $_GET['class'];
+                $sql = "SELECT * FROM projects WHERE ProjectGroup = '".$class."'";
+            }
+            else
+            {
+                $sql = "SELECT * FROM projects";
+            }
+
+            
+            $resource = mysqli_query($connect, $sql);
+    
+            $projects = array();
+            while($result = mysqli_fetch_assoc($resource))
+            {
+                $projects[] = $result;
+            }
         ?>
 
         <div id="AboutMe">
@@ -49,27 +69,27 @@
                     Project Class
                 </button>
                 <div class="dropdown-menu">
-                    <button class="dropdown-item" type="button">Webdevelopment frontend</button>
-                    <button class="dropdown-item" type="button">Webdevelopment backend</button>
-                    <button class="dropdown-item" type="button">C#</button>
-                    <button class="dropdown-item" type="button">Arduino</button>
-                    <button class="dropdown-item" type="button">Xamarin</button>
-                    <button class="dropdown-item" type="button">Industrial Automation</button>
+                    <button class="dropdown-item" type="button"><a href="?">All</a></button>
+                    <button class="dropdown-item" type="button"><a href="?class=Web">Webdevelopment</a></button>
+                    <button class="dropdown-item" type="button"><a href="?class=APPR">C#</a></button>
+                    <button class="dropdown-item" type="button"><a href="?class=Arduino">Arduino</a></button>
+                    <button class="dropdown-item" type="button"><a href="?class=Xamarin">Xamarin</a></button>
+                    <button class="dropdown-item" type="button"><a href="?class=Industrial">Industrial Automation</a></button>
                 </div>
             </div>
-
+            </br></br>
             <div class="row">
                 <?php 
-                    $projects = array("Calculator++", "Radio Gaga","Gameworld","Vault JS","Marvel Heroes","Vault, Dragrace","Mystery Number","Living Colors","Vault","Bike Light","Watertank","Ball Sorter");
-                    foreach ($projects as $WorkingProject) {
+                    foreach($projects as $k=>$project)
+                    {
                         ?>
                         <div class="col-md-4">
                             <div class="card">
-                                <a href="Projects.php">
-                                    <img src="" class="card-img-top ProjectImage">
+                                <a href="Projects.php?proID=<?php echo $project['ProjectID']; ?>">
+                                    <img src="images/<?php echo $project['ProjectImage']; ?>" class="card-img-top ProjectImage">
                                 </a>
                                 <div class="card-body">
-                                    <h5 class="card-title"><?php echo $WorkingProject;?></h5>
+                                    <h5 class="card-title"><?php echo $project['ProjectName']; ?></h5>
                                 </div>
                             </div>
                             <br><br>

@@ -19,6 +19,9 @@ body{
 
 .ProjectImage{
     height: 195px;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 
