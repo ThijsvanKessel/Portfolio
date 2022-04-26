@@ -69,12 +69,12 @@
                     Project Class
                 </button>
                 <div class="dropdown-menu">
-                    <button class="dropdown-item" type="button"><a href="?">All</a></button>
-                    <button class="dropdown-item" type="button"><a href="?class=Web">Webdevelopment</a></button>
-                    <button class="dropdown-item" type="button"><a href="?class=APPR">C#</a></button>
-                    <button class="dropdown-item" type="button"><a href="?class=Arduino">Arduino</a></button>
-                    <button class="dropdown-item" type="button"><a href="?class=Xamarin">Xamarin</a></button>
-                    <button class="dropdown-item" type="button"><a href="?class=Industrial">Industrial Automation</a></button>
+                    <form action="?" method="post"><button class="dropdown-item" type="submit">All</button></form>
+                    <form action="?class=Web" method="post"><button class="dropdown-item" type="submit">Webdevelopment</button></form>
+                    <form action="?class=APPR" method="post"><button class="dropdown-item" type="submit">C#</button></form>
+                    <form action="?class=Arduino" method="post"><button class="dropdown-item" type="submit">Arduino</button></form>
+                    <form action="?class=Xamarin" method="post"><button class="dropdown-item" type="submit">Xamarin</button></form>
+                    <form action="?class=Industrial" method="post"><button class="dropdown-item" type="submit">Industrial Automation</button></form>
                 </div>
             </div>
             </br></br>

@@ -23,7 +23,7 @@
                 }
             else
                 {
-                    $proID = rand(1,3);
+                    $proID = rand(1,22);
                 }
 
             $connect = mysqli_connect("localhost","root","", "portfoliobase");
@@ -54,36 +54,28 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <iframe src="<?php echo $project['ProjectLink']; ?>" width="1070px" height="600px"></iframe>
+                                <?php 
+                                    if($project['ProjectGroup'] == 'Industrial')
+                                    {
+                                        echo '<img src="'.$project['ProjectLink'].'" class="ProjectImageBig">';
+                                    }
+                                    else
+                                    {
+                                        echo '<iframe src="'.$project['ProjectLink'].'" width="1070px" height="600px"></iframe>';
+                                    }
+                                ?>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 </br></br>
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Description:</h5>
                                 <p class="card-text"><?php echo $project['ProjectDescription']; ?></p><br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Made using:</h5>
-                                <ul>
-                                    <li>
-                                        <p class="card-text">HTML</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text">PHP</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text">CSS</p>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
