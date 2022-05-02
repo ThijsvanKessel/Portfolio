@@ -1,58 +1,64 @@
 var codeDivision = document.getElementById("number-container");
-var textDisplay = document.getElementById("textDisplay");
+var numberCounter = document.getElementById("numberCounter");
 var numberButtons = document.getElementsByClassName('buttonNumber');
 var greenBlock = document.getElementById("greenBlock1");
 var redBlock = document.getElementById("redBlock1");
-var explosion = document.getElementById("explosion");
-var correctAmountDisplay = document.getElementById("correct-attempts-number");
-var wrongAmountDisplay = document.getElementById("wrong-attempts-number");
-var correctCounter = 0;
-var wrongCounter = 0;
 var intervalTimer = 0;
 var ClickCounter = 0;
-var codeOne = 6;
-var codeTwo = 6;
-var codeThree = 6;
+var codeOne = 2;
+var codeTwo = 3;
+var codeThree = 2;
 
-explosion.style.visibility = 'hidden';
+function EmptyFunction()
+{
+    redBlock.style.visibility = 'hidden';
+    redBlock2.style.visibility = 'hidden';
+    greenBlock1.style.visibility = 'hidden';
+    greenBlock2.style.visibility = 'hidden';
+}
 
 function getNumber(clickedButton){
     ClickCounter++;
     console.log(ClickCounter);
-    codeDivision.innerHTML += clickedButton.value;
 
-    if(ClickCounter == 1)
+    if(clickedButton.value == "Reset")
     {
+        numberCounter.innerHTML = "0";
+        ClickCounter = 0;
+        codeDivision.innerHTML += "<a id='greenText'>code input has been reset!</a><br><br>";
+    }
+
+    else if(ClickCounter == 1)
+    {
+        codeDivision.innerHTML += "<a id='blueText'> button pressed = " + clickedButton.value +"</a><br>";
         numberOne = clickedButton.value;
+        numberCounter.innerHTML = "1";
     }
 
     else if(ClickCounter == 2)
     {
+        codeDivision.innerHTML += "<a id='blueText'> button pressed = " + clickedButton.value +"</a><br>";
         numberTwo = clickedButton.value;
+        numberCounter.innerHTML = "2";
     }
 
     else if(ClickCounter == 3)
     {
+        codeDivision.innerHTML += "<a id='blueText'> button pressed = " + clickedButton.value +"</a><br>";
         numberThree = clickedButton.value;
+        numberCounter.innerHTML = "3";
         disableButtons()
         
 
         if(numberOne == codeOne && numberTwo == codeTwo && numberThree == codeThree)
         {
-            console.log("Cracked");
-            textDisplay.innerHTML = "Correct";
-            correctCounter++;
-            correctAmountDisplay.innerHTML = correctCounter;
+            codeDivision.innerHTML += "<a id='greenText'>Solution is good!</a><br><br>";
             blinkgreen();
         }
 
         else
         {
-            console.log("Try again");
-            textDisplay.innerHTML = "Wrong";
-            wrongCounter++;
-            wrongAmountDisplay.innerHTML = wrongCounter;
-            explosion.style.visibility = 'visible';
+            codeDivision.innerHTML += "<a id='RedText'>Solution is false!</a><br><br>";
             blinkred();
         }
     }
@@ -81,13 +87,11 @@ function enableButtons() {
 		numberButtons[i].removeAttribute('disabled');
     }
     ClickCounter = 0;
-    codeDivision.innerHTML = "";
-    textDisplay.innerHTML = "";
-
+    numberCounter.innerHTML = "0";
 }
 
 function blinkred(){
-    document.getElementById('wrongSound').play();
+    redBlock2.style.visibility = 'visible';
     var blink = setInterval(function() {
 	
         //add +1 every time the setinterval function runs		
@@ -106,7 +110,7 @@ function blinkred(){
             //ClearInterval function stops the interval after 10 times
             clearInterval(blink);
             enableButtons();
-            explosion.style.visibility = 'hidden';
+            EmptyFunction();
         }
 
     }, 500);
@@ -114,7 +118,7 @@ function blinkred(){
 }
 
 function blinkgreen(){
-    document.getElementById('correctsSound').play();
+    greenBlock2.style.visibility = 'visible';
     var blink = setInterval(function() {
 	
         //add +1 every time the setinterval function runs		
@@ -129,43 +133,23 @@ function blinkgreen(){
 
         //check if the interval has runned ten times
         if(intervalTimer == 5) {
-
             //ClearInterval function stops the interval after 10 times
             clearInterval(blink);
-            animationOpen();
+            enableButtons();
+            EmptyFunction();
         }
 
     }, 500);
     intervalTimer = 0;
 }
 
-function animationOpen() {
-    var elem = document.getElementById("vaultDoor");   
-    var pos = 340;
-    var id = setInterval(frame, 5);
-    document.getElementById('doorSound').play();
-    function frame() {
-      if (pos == 680) {
-        clearInterval(id);
-        animationClose();
-      } else {
-        pos++; 
-        elem.style.left = pos + "px"; 
-      }
-    }
-  }
+function clearButton()
+{
+    codeDivision.innerHTML = "";
+}
 
-  function animationClose() {
-    var elem = document.getElementById("vaultDoor");   
-    var pos = 680;
-    var id = setInterval(frame, 5);
-    function frame() {
-      if (pos == 340) {
-        clearInterval(id);
-        enableButtons();
-      } else {
-        pos--; 
-        elem.style.left = pos + "px"; 
-      }
-    }
-  }
+function cheatFunction()
+{
+    alert('code = 232');
+    document.getElementById("CheatCeckbox").checked = false;
+}

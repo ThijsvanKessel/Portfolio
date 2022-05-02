@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Vault">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="img/Favicon.png" type="image/x-icon"/>
+        <title>Vault</title>
+    </head>
+<body onload="EmptyFunction()">
+    <div id="main-container">
+        <div id="mid-container">
+            <div id="redBlock1"></div>
+            <div id="redBlock2"></div>
+            <div id="greenBlock1"></div>
+            <div id="greenBlock2"></div>
+            <div id="BackgroundBlock"></div>
+            <div id="display"><br>
+                <div id="number-container"></div>
+            </div>
+            <div id="buttons">
+                <button value="1" class="buttonNumber" onclick="getNumber(this)">1</button>
+                <button value="2" class="buttonNumber" onclick="getNumber(this)">2</button>
+                <button value="3" class="buttonNumber" onclick="getNumber(this)">3</button>
+                <button value="Reset" class="buttonNumber" onclick="getNumber(this)">Reset</button>
+            </div>
+            <button value="Clear" class="clearButton" onclick="clearButton()">Clear</button>
+            <div id="numberCounter">0</div>
+            <input type="checkbox" id="SerialMonitorCeckbox" checked></input>
+            <input type="checkbox" id="CheatCeckbox" onclick="cheatFunction()"></input>
+        </div>
+    </div>
+    <script type="text/javascript" src="JS/main.js"></script>
+</body>
