@@ -1,0 +1,153 @@
+body {
+    background-image: url("../img/CSharpMysteryNumber.PNG");
+    background-size: 950px, auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+button{
+    background-color: #E1E1E1;
+}
+
+.menu-button{
+    height: 45px; 
+    width: 150px;
+    font-size: large;
+}
+
+.extra-button{
+    height: 45px; 
+    width: 150px;
+    font-size: large;
+}
+
+#Play-button{
+    position: absolute;
+    top: 131px;
+    left: 98px;
+}
+
+#Restart-button{
+    position: absolute;
+    top: 190px;
+    left: 98px;
+}
+
+#Extra-button{
+    position: absolute;
+    top: 250px;
+    left: 98px;
+}
+
+#Exit-button{
+    position: absolute;
+    top: 312px;
+    left: 98px;
+}
+
+#Manual-button{
+    position: absolute;
+    top: 391px;
+    left: 100px; 
+}
+
+#About-button{
+    position: absolute;
+    top: 453px;
+    left: 100px;  
+}
+
+#Locate-button{
+    position: absolute;
+    top: 515px;
+    left: 100px;
+}
+
+#Generate-button{
+    position: absolute;
+    top: 284px;
+    left: 290px;
+    width: 308px;
+    height: 82px;
+    font-size: large;
+}
+
+#Check-button{
+    position: absolute;
+    top: 172px;
+    left: 648px;
+    width: 219px;
+    height: 66px;
+    font-size: large;
+}
+
+#min-value{
+    position: absolute;
+    top: 123px;
+    left: 454px;
+    width: 138px;
+    height: 43px;
+    font-size: large;
+}
+
+#max-value{
+    position: absolute;
+    top: 176px;
+    left: 454px;
+    width: 138px;
+    height: 43px;
+    font-size: large;
+}
+
+#Attempts{
+    position: absolute;
+    top: 227px;
+    left: 453px;
+    width: 149px;
+    height: 51px;
+    font-size: large;
+}
+
+#guess{
+    position: absolute;
+    top: 119px;
+    left: 737px;
+    width: 126px;
+    height: 43px;
+    font-size: large;
+}
+
+#greenBlock{
+    width: 219px;
+    height: 32px;
+    left: 648px;
+    top: 282px;
+    background-color: rgb(0, 167, 0);
+    position: absolute;
+}
+
+#redBlock{
+    width: 219px;
+    height: 32px;
+    left: 648px;
+    top: 282px;
+    background-color: red;
+    position: absolute;
+}
+
+#awnserHint{
+    font-size: large;
+    left: 648px;
+    top: 250px;
+    position: absolute;
+}
+
+#previousGuess{
+    font-size: large;
+    left: 840px;
+    top: 345px;
+    position: absolute;
+}

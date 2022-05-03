@@ -18,7 +18,7 @@ function games()
 	{
 		$sortOption = 'categoryName DESC';
 	}
-		$connect = mysqli_connect("localhost","root","", "gameworld2");
+		$connect = mysqli_connect("localhost","root","", "gameworldthijs");
 		// if(in_array($catId, array(1,2,3)))
 	if ($catId == 1 || $catId == 2 || $catId == 3 )
 		{

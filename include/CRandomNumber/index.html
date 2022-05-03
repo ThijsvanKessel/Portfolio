@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Vault">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="img/Favicon.png" type="image/x-icon"/>
+        <title>Vault</title>
+    </head>
+<body onload="bodyLoadFunction()">
+    <div id="main-container">
+        <div id="menu-buttons">
+            <button value="Play" id="Play-button" class="menu-button" onclick="buttonPress(this)">Play</button>
+            <button value="Restart" id="Restart-button" class="menu-button" onclick="buttonPress(this)">Restart</button>
+            <button value="Extra" id="Extra-button" class="menu-button" onclick="buttonPress(this)">Extra</button>
+            <button value="Exit" id="Exit-button" class="menu-button" onclick="buttonPress(this)">Exit</button>
+            <button value="Manual" id="Manual-button" class="extra-button" onclick="buttonPress(this)">Manual</button>
+            <button value="About" id="About-button" class="extra-button" onclick="buttonPress(this)">About</button>
+            <button value="Locate" id="Locate-button" class="extra-button" onclick="buttonPress(this)">Locate</button>
+        </div>
+        <div id="settings">
+            <input id="min-value" class="settingsInputs" type="number" min="0" value="0">
+            <input id="max-value" class="settingsInputs" type="number" min="1" value="100">
+            <select name="Attempts" class="settingsInputs" id="Attempts">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button value="Generate" class="settingsInputs" id="Generate-button" onclick="generateButtonFunction()">Generate-button</button>
+        </div>
+
+        <div id="game">
+            <input id="guess" class="gameInputs" type="number" min="0" value="0">
+            <button id="Check-button" class="gameInputs">Check</button>
+            <a id="awnserHint"></a>
+            <div id="redBlock"></div>
+            <div id="greenBlock"></div>
+            <a id="previousGuess"></a>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="JS/main.js"></script>
+</body>
