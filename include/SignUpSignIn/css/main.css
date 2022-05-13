@@ -1,0 +1,172 @@
+body {
+    background-color: darkgrey;
+    font-family: Helvetica, sans-serif;
+}
+
+#main-container{
+    background-color: rgb(114, 114, 114);
+    width: 347px;
+    left: 38%;
+    top: 220px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+#title-container{
+    left: 38%;
+    position: absolute;
+    top: 160px;
+}
+
+#input-box1{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    
+}
+
+#input-box2{
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#input-box3{
+    margin-bottom: 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.main-nav{
+    background-color: darkred;
+}
+
+.main-nav li{
+    list-style-type: none;
+    display: inline;
+}
+
+.main-nav a{
+    display: inline-block;
+    padding-left:20px;
+    height: 30px;
+    background-color: darkred;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+#logout{
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+
+.content-container li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.content-container a{
+    display: inline-block;
+}
+
+.footer{
+	width: 230px;
+	height: 20px;
+    bottom: 0px;
+    left: 640px;
+	text-align: center;
+	background-color:darkred;
+    color: white;
+    border-radius: 25px;
+    position: absolute;
+}
+
+.footer a{
+	color: white;
+	list-style: none;
+	color: white;
+	text-align: center;
+	text-decoration: blink;
+}
+
+#home-screen{
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgb(104, 104, 104);
+    color: white;
+    width: 250px;
+    position: absolute;
+    left: 650px;
+    top: 150px;
+    text-align: center;
+}
+
+#title
+{
+    font-size: 30px;
+}
+
+#created-screen{
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgb(104, 104, 104);
+    color: white;
+    width: 450px;
+    position: absolute;
+    left: 550px;
+    top: 150px;
+    text-align: center;
+} 
+
+#login-screen
+{
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgb(104, 104, 104);
+    color: white;
+    width: 250px;
+    position: absolute;
+    left: 650px;
+    top: 150px;
+    text-align: center;
+}
+
+#link
+{
+    color: lightgrey;
+    text-decoration: none;
+}
+
+#link:hover
+{
+    color: grey;
+}
+
+#dino
+{
+    width: 220px;
+    height: 220px;
+    padding-left: 4px;
+}
+
+#kenobi
+{
+    width: 220px;
+    height: 184px;
+    padding-left: 4px;
+}
+
+#data{
+    background-color: darkred;
+}
+
+#information
+{
+    color: white;
+    padding-left: 30px;
+}

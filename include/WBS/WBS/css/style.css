@@ -1,0 +1,32 @@
+.redbutton{
+    background-color: #f44336;
+    border-radius: 20px;
+}
+.greenbutton{
+    background-color: #4CAF50;
+    border-radius: 20px;
+}
+.bluebutton{
+    background-color: #008CBA;
+    border-radius: 20px;
+}
+.orangebutton{
+    background-color: #ffa600;
+    border-radius: 20px;
+    width: 90px;
+}
+.tablecontainer1{
+    overflow-x:auto;
+}
+.tablecontainer2{
+    overflow-x:auto;
+}
+.table2{
+    width: 100%;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #e4e4e4;
+}

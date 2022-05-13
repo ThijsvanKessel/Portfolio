@@ -1,0 +1,25 @@
+body{
+    font-family: Verdana !important; 
+    background-color: #4cbba8;
+}
+
+.HomeImage{
+    width: 300px;
+}
+
+#border{
+    border: 1px black solid;
+    border-radius: 25px;
+    background-color: white;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.login-style{    
+    padding-top: 15px;
+    margin-top: 150px;
+    margin-bottom: 556px;
+    border: 1px black solid;
+    border-radius: 25px;
+    background-color: white;
+}

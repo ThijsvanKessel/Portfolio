@@ -4,10 +4,10 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <!-- custom CSS -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Portfolio</title>
@@ -31,7 +31,6 @@
                 $sql = "SELECT * FROM projects";
             }
 
-            
             $resource = mysqli_query($connect, $sql);
     
             $projects = array();
@@ -44,11 +43,11 @@
         <div id="AboutMe">
             <div class="container">
                 <div class="row">
-                <div class="col-md-4">
-                        <img src="images/Logo.png" width="300px">
+                    <div class="col-md-4">
+                        <img src="images/Logo.png" width="300px" alt="">
                     </div>
                     <div class="col-md-8">
-                    <br><br><br>
+                        <br><br><br>
                         <ul>
                             <li>Thijs van Kessel</li>
                             <li>Programmer</li>
@@ -70,14 +69,14 @@
                 </button>
                 <div class="dropdown-menu">
                     <form action="?" method="post"><button class="dropdown-item" type="submit">All</button></form>
-                    <form action="?class=Web" method="post"><button class="dropdown-item" type="submit">Webdevelopment</button></form>
+                    <form action="?class=Web" method="post"><button class="dropdown-item" type="submit">Web development</button></form>
                     <form action="?class=APPR" method="post"><button class="dropdown-item" type="submit">C#</button></form>
                     <form action="?class=Arduino" method="post"><button class="dropdown-item" type="submit">Arduino</button></form>
                     <form action="?class=Xamarin" method="post"><button class="dropdown-item" type="submit">Xamarin</button></form>
                     <form action="?class=Industrial" method="post"><button class="dropdown-item" type="submit">Industrial Automation</button></form>
                 </div>
             </div>
-            </br></br>
+            <br><br>
             <div class="row">
                 <?php 
                     foreach($projects as $k=>$project)
@@ -85,12 +84,13 @@
                         ?>
                         <div class="col-md-4">
                             <div class="card">
-                                <a href="Projects.php?proID=<?php echo $project['ProjectID']; ?>">
+                                <form method="POST" action="Projects.php">
+                                    <input type="hidden" name="ProjectID" id="ProjectID" value="<?php echo $project['ProjectID']; ?>"/>
                                     <img src="images/<?php echo $project['ProjectImage']; ?>" class="card-img-top ProjectImage">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $project['ProjectName']; ?></h5>
-                                </div>
+                                    <div class="card-body">
+                                        <input type="submit" value="<?php echo $project['ProjectName']; ?>">
+                                    </div>
+                                </form>
                             </div>
                             <br><br>
                         </div>

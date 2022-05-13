@@ -61,93 +61,90 @@ function teams()
 	{
 		$heroes[] = $result4;
 	}
-	?>
 
-	<div id="main-container">
+    foreach($heroes as $key4=>$heroes)
+    {
+        ?>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style=" padding: 0 !important; margin: 0 !important;">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 font-weight-normal"><?php echo $heroes['HeroName']; ?></h1><br>
+                <img style="max-width: 250px;" src="img/Characters/<?php echo $heroes['HeroImage']; ?>"><br><br>
+                <p class="lead font-weight-normal"><?php echo $heroes['HeroDescription'] ?></p>
+                <a><?php echo $heroes['HeroPowers'] ?></a>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 
-		<div id="main-left">
-			<div id="title">
-				<a>Teams</a>
-			</div>
-			<ul id="list">
-				<?php
-				foreach($teamNames as $key3=>$teamNames){
-					?>
-					<li>
-						<img id="TeamIcon" src="img/Teams/<?php echo $teamNames['TeamImage']; ?>"></img>
-						<a href="index.php?teamId=<?php echo $teamNames['TeamID']; ?>"><?php echo $teamNames['TeamName']; ?></a>
-						<a><?php echo $teamNames['TeamHeroCount']; ?></a>
-					</li>
-					<?php
-				}
-				?>
-			</ul>
-		</div>
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Teams</h2>
+                <p class="lead">Select a team to learn more.</p>
+            </div>
+            <div class="bg-light shadow-sm mx-auto" style="width: 100%; border-radius: 21px 21px 21px 21px;">
+                <br>
+                <?php
+                foreach($teamNames as $key3=>$teamNames){
+                    ?>
+                    <div class="row no-gutters rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style=" color: black;border-radius: 21px 21px 21px 21px !important;">
+                        <div class="col-auto d-none d-lg-block">
+                            <img id="TeamHeroImage" src="img/Teams/<?php echo $teamNames['TeamImage']; ?>">
+                        </div>
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <h3 class="mb-0" ><?php echo $teamNames['TeamName']; ?></h3><br>
+                            <p class="card-text mb-auto"><?php echo $teamNames['TeamHeroCount']." Members"; ?></p>
+                            <a href="index.php?teamId=<?php echo $teamNames['TeamID']; ?>" class="stretched-link">To Heroes</a>
+                        </div>
+                    </div>
 
-		<div id="main-center">
-			<div id="midleTitle">
-				<?php
-				foreach($teams as $key2=>$teams){
-					?>
-					<a id="title"><?php echo $teams['TeamName']; ?></a>
-					<?php
-				}
-				?>
-			</div>
-			<div class="MidHeroes">
-				<ul>
-					<?php
-					foreach($characters as $key1=>$characters)
-					{
-						?>
-						<li id="HeroList">
-							<div class="HeroInfo">
-								<div class="ImageContainer">
-									<img id="TeamHeroImage" src="img/Characters/<?php echo $characters['HeroImage']; ?>">
-								</div>
-								<div id="SmallDescription">
-									<a id="Title"><?php echo $characters['HeroName']; ?></h1><br>
-									<a id="descriptionText"><?php echo $characters['HeroDescription']; ?></a><br><br>
-									<button type="button"  id="button"><a href="index.php?heroId=<?php echo $characters['HeroID']?>">Learn More</a></button>
-								</div>
-							</div>	
-						</li>				
-					<?php
-					}
-					?>
-				</ul>	
-			</div>
-		</div>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
 
-		<div id="main-right">
-			<div class="hero-page">
-			<?php
-			foreach($heroes as $key4=>$heroes)
-			{
-				?>
-				<div id="MainHeroInfo">
-					<div id="HeroBanner">
-						<h1 id="HeroTitle"><?php echo $heroes['HeroName']; ?></h1>
-						<img class="MainImage" src="img/Characters/<?php echo $heroes['HeroImage']; ?>"><br>
-					</div>
-				</div>
-				<h1 id="Paragraph">Info:</h1>
-				<a>
-					<?php
-						echo $heroes['HeroDescription']
-					?>
-				</a>
-				<h1 id="Paragraph">Powers:</h1>
-				<a>
-					<?php
-						echo $heroes['HeroPowers']
-					?>
-				</a>
-			<?php
-			}
-			?>
-			</div>				
-	</div>
+        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">
+                    <?php
+                    if (!isset($_GET['teamId']))
+                    {
+                        ?> <a id="title">Heroes</a> <?php
+                    }
+                    else
+                    {
+                        foreach($teams as $key2=>$teams){
+                            ?> <a id="title"><?php echo $teams['TeamName']; ?></a> <?php
+                        }
+                    }
+                    ?>
+                </h2>
+                <p class="lead">Select a hero to learn more.</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto" style="width: 90%;border-radius: 21px 21px 21px 21px;">
+                <br>
+                <?php
+                foreach($characters as $key1=>$characters)
+                {
+                    ?>
+                    <div class="row no-gutters rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="color: whitesmoke; border-radius: 21px 21px 21px 21px !important;">
+                        <div class="col-auto d-none d-lg-block">
+                            <img id="TeamHeroImage" src="img/Characters/<?php echo $characters['HeroImage']; ?>">
+                        </div>
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <h3 class="mb-0"><?php echo $characters['HeroName']; ?></h3><br>
+                            <p class="card-text mb-auto"><?php echo $characters['HeroDescription']; ?></p>
+                            <a href="index.php?heroId=<?php echo $characters['HeroID']?>" class="stretched-link">Learn More</a>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
+    </div>
 	<?php		
 }
 ?>

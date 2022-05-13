@@ -35,4 +35,10 @@ body{
     display: block;
 }
 
+.styling{
+    border: 1px black solid;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
 
